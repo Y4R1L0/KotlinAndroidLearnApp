@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KotlinLearnApp</string>
+    <string name="buttons">Buttons</string>
+    <string name="this_is_app_in_kotlin_written_by_y4r1l0_for_learn_kotlin_p">This is app in kotlin, written by Y4R1L0, for learn kotlin. =P</string>
+    <string name="buttons_and_toast">Buttons and toast</string>
+    <string name="title_activity_buttons">ButtonsActivity</string>
+    <string name="_0">0</string>
+    <string name="time">TIME</string>
+    <string name="toast_me">Toast me!</string>
+</resources>
