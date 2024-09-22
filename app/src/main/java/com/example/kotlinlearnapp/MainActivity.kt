@@ -24,6 +24,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,RNGTableActivity::class.java)
             startActivity(intent)
         })
+        val TodoAct = findViewById<Button>(R.id.ToDoListActivity)
+        TodoAct.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this,TodoListActivity::class.java)
+            startActivity(intent)
+        })
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
