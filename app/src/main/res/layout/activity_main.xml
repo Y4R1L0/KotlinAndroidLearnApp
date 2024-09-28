@@ -44,5 +44,14 @@
         android:textSize="20dp"
         android:layout_below="@id/RNGTableActivity"
         />
+    <Button
+        android:id="@+id/MVVMJokeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="MVVM Joke API generator"
+        android:textSize="20dp"
+        android:layout_below="@id/ToDoListActivity"
+        />
 
 </RelativeLayout>
