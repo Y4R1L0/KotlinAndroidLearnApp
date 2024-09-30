@@ -1,10 +1,7 @@
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 class JokeRepository {
 
@@ -19,23 +16,14 @@ class JokeRepository {
         apiService = retrofit.create(JokeApiService::class.java)
     }
 
-    fun getRandomJoke(): LiveData<JokeModel?> {
-        val jokeLiveData = MutableLiveData<JokeModel?>()
-
-        apiService.getRandomJoke().enqueue(object : Callback<JokeModel> {
-            override fun onResponse(call: Call<JokeModel>, response: Response<JokeModel>) {
-                if (response.isSuccessful) {
-                    jokeLiveData.postValue(response.body())
-                } else {
-                    jokeLiveData.postValue(null)
-                }
+    suspend fun getRandomJoke(): JokeModel? {
+        return withContext(Dispatchers.IO) {
+            try {
+                val response = apiService.getRandomJoke()
+                response
+            } catch (e: Exception) {
+                null
             }
-
-            override fun onFailure(call: Call<JokeModel>, t: Throwable) {
-                jokeLiveData.postValue(null)
-            }
-        })
-
-        return jokeLiveData
+        }
     }
 }

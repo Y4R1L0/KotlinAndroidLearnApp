@@ -5,15 +5,12 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 
 class MVVM_API_Anecdotes_Activity : AppCompatActivity() {
 
@@ -28,16 +25,16 @@ class MVVM_API_Anecdotes_Activity : AppCompatActivity() {
         val btnGenJoke : Button = findViewById(R.id.generateJokeBtn)
         val tvJoke: TextView = findViewById(R.id.JokeTextView)
 
-        btnGenJoke.setOnClickListener {
-            jokeViewModel.getJoke().observe(this, Observer { joke ->
+            jokeViewModel.joke.observe(this, Observer { joke ->
                 if (joke != null) {
                     tvJoke.text = joke.joke
                 } else {
                     tvJoke.text = "Не удалось загрузить анекдот. Попробуйте снова."
                 }
             })
+        btnGenJoke.setOnClickListener {
+            jokeViewModel.getJoke()
         }
-
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
