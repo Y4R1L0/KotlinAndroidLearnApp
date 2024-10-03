@@ -1,6 +1,6 @@
 package com.example.kotlinlearnapp
 
-import JokeViewModel
+import com.example.kotlinlearnapp.AnecdotesActivityResources.JokeViewModel
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
@@ -22,21 +22,23 @@ class MVVM_API_Anecdotes_Activity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_mvvm_api_anecdotes)
 
-        val btnGenJoke : Button = findViewById(R.id.generateJokeBtn)
+        val btnGenJoke: Button = findViewById(R.id.generateJokeBtn)
         val tvJoke: TextView = findViewById(R.id.JokeTextView)
 
-            jokeViewModel.joke.observe(this, Observer { joke ->
-                if (joke != null) {
-                    tvJoke.text = joke.joke
-                } else {
-                    tvJoke.text = "Не удалось загрузить анекдот. Попробуйте снова."
-                }
-            })
+        jokeViewModel.joke.observe(this, Observer { joke ->
+            if (joke != null) {
+                tvJoke.text = joke.joke
+            } else {
+                tvJoke.text = "Failed to load joke. Try again."
+            }
+        })
+
+        // Set the OnClickListener for the button
         btnGenJoke.setOnClickListener {
             jokeViewModel.getJoke()
         }
 
-
+        // Handling window insets for system bars
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
