@@ -7,39 +7,38 @@
     android:layout_height="match_parent"
     android:padding="20dp"
     tools:context=".ButtonsActivity">
-    <TableLayout
-        android:id="@+id/tablelayout"
-        android:layout_width="wrap_content"
+    <GridLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-        <TableRow>
+        android:id="@+id/linL"
+        android:columnCount="2">
             <Button
                 android:id="@+id/BtnCounter"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/_0"
-                android:textSize="40sp"/>
+                android:textSize="40sp"
+                android:layout_columnWeight="1"/>
             <Button
                 android:id="@+id/YesNoBtn"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Yes"
-                android:textSize="40sp"/>
-        </TableRow>
-        <TableRow>
+                android:textSize="40sp"
+                android:layout_columnWeight="1"/>
             <Button
                 android:id="@+id/ToastBtn"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Toast"
-                android:textSize="40sp"/>
+                android:textSize="40sp"
+                android:layout_columnWeight="1"/>
             <Button
                 android:id="@+id/TimeToastButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/time"
                 android:textSize="40sp"
-                />
-        </TableRow>
-    </TableLayout>
+                android:layout_columnWeight="1"/>
+    </GridLayout>
 </RelativeLayout>
