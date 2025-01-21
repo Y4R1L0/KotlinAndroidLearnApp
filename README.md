@@ -1,4 +1,5 @@
-Just learning kotlin for android dev, nothing special )
+Just learning kotlin for android dev, nothing special
+yes, I know that design is terrible because It's too difficult to create apps without sketches)\n
 ![scr1](https://github.com/user-attachments/assets/41f70041-429d-419c-a50d-8537f3cf3a8b)
 ![scr2](https://github.com/user-attachments/assets/ef33757d-5ee6-4d5d-b8f2-8ba0b1463539)
 ![scr3](https://github.com/user-attachments/assets/7252a580-80f9-45c2-b5d3-2d0ec44b9f0e)
