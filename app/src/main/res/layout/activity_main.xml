@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Todo list"
+        android:text="Todo list using ROOM library"
         android:textSize="20dp"
         android:layout_below="@id/RNGTableActivity"
         />
@@ -54,4 +54,12 @@
         android:layout_below="@id/ToDoListActivity"
         />
 
+    <Button
+        android:id="@+id/AnimationActivityBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Animation activity"
+        android:textSize="20dp"
+        android:layout_below="@id/MVVMJokeBtn"/>
 </RelativeLayout>

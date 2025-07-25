@@ -34,6 +34,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,MVVM_API_Anecdotes_Activity::class.java)
             startActivity(intent)
         })
+        val animAct = findViewById<Button>(R.id.AnimationActivityBTN)
+        animAct.setOnClickListener (View.OnClickListener{
+            val intent = Intent(this, AnimationActivity::class.java )
+            startActivity(intent)
+        })
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
