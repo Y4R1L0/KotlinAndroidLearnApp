@@ -2,8 +2,6 @@ package com.example.kotlinlearnapp.AnecdotesActivityResources
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
 class JokeRepository {
 
@@ -18,14 +16,11 @@ class JokeRepository {
         apiService = retrofit.create(JokeApiService::class.java)
     }
 
-    suspend fun getRandomJoke(): JokeModel? {
-        return withContext(Dispatchers.IO) {
-            try {
-                val response = apiService.getRandomJoke()
-                response
-            } catch (e: Exception) {
-                null
-            }
+    suspend fun getRandomJoke(): Result<JokeModel> {
+        return try {
+            Result.success(apiService.getRandomJoke())
+        } catch (e: Exception) {
+            Result.failure(e)
         }
     }
 }

@@ -49,4 +49,12 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="toast">Toast</string>
+    <string name="yes_no">Yes/No</string>
+    <string name="animation_activity">Animation activity</string>
+    <string name="rng_table">RNG table</string>
+    <string name="todo_list_using_room_library">Todo list using ROOM library</string>
+    <string name="joke_api_generator_mvvm">Joke API generator MVVM</string>
+    <string name="mvvm_anecdote_generator">MVVM anecdote generator</string>
+    <string name="generate_random_anecdote">Generate random anecdote</string>
 </resources>

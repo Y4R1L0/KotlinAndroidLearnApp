@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -15,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="@string/this_is_app_in_kotlin_written_by_y4r1l0_for_learn_kotlin_p"
         android:textAlignment="center"
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:layout_marginBottom="30dp"/>
 
     <Button
@@ -31,8 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="RNG table"
-        android:textSize="20dp"
+        android:text="@string/rng_table"
+        android:textSize="20sp"
         android:layout_below="@id/ButtonsActivityB"
         />
     <Button
@@ -40,8 +39,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Todo list using ROOM library"
-        android:textSize="20dp"
+        android:text="@string/todo_list_using_room_library"
+        android:textSize="20sp"
         android:layout_below="@id/RNGTableActivity"
         />
     <Button
@@ -49,8 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="MVVM Joke API generator"
-        android:textSize="20dp"
+        android:text="@string/joke_api_generator_mvvm"
+        android:textSize="20sp"
         android:layout_below="@id/ToDoListActivity"
         />
 
@@ -59,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Animation activity"
-        android:textSize="20dp"
+        android:text="@string/animation_activity"
+        android:textSize="20sp"
         android:layout_below="@id/MVVMJokeBtn"/>
 </RelativeLayout>

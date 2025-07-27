@@ -21,19 +21,19 @@ class AnimationActivity : AppCompatActivity() {
         val btt2 = AnimationUtils.loadAnimation(this, R.anim.btt2)
         val btt3 = AnimationUtils.loadAnimation(this, R.anim.btt3)
 
-        val headertitle = findViewById(R.id.headertitle) as TextView
-        val subtitle = findViewById(R.id.subtitle) as TextView
+        val headertitle: TextView = findViewById(R.id.headertitle)
+        val subtitle: TextView = findViewById(R.id.subtitle)
 
-        val ic_cards = findViewById(R.id.ImageCards) as ImageView
+        val iccards: ImageView = findViewById(R.id.ImageCards)
 
-        val res1 = findViewById(R.id.res1) as LinearLayout
-        val res2 = findViewById(R.id.res2) as LinearLayout
-        val res3 = findViewById(R.id.res3) as LinearLayout
+        val res1: LinearLayout = findViewById(R.id.res1)
+        val res2: LinearLayout = findViewById(R.id.res2)
+        val res3: LinearLayout = findViewById(R.id.res3)
 
         headertitle.startAnimation(ttb)
         subtitle.startAnimation(ttb)
 
-        ic_cards.startAnimation(stb)
+        iccards.startAnimation(stb)
         
         res1.startAnimation(btt1)
         res2.startAnimation(btt2)

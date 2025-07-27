@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
-    tools:context=".MVVM_API_Anecdotes_Activity">
+    tools:context=".APIAnecdotesActivityMVVM">
 <TextView
     android:id="@+id/JokeTextLogoMaybe"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="MVVM anecdote generator"
-    android:textSize="28dp"
+    android:text="@string/mvvm_anecdote_generator"
+    android:textSize="28sp"
     android:textAlignment="center"
     />
     <TextView
         android:id="@+id/JokeTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:layout_below="@id/JokeTextLogoMaybe"
         android:layout_marginTop="20dp"/>
     <LinearLayout
@@ -39,8 +38,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Generate random anecdote"
-            android:textSize="20dp"
+            android:text="@string/generate_random_anecdote"
+            android:textSize="20sp"
             android:background="@color/black"/>
 
 

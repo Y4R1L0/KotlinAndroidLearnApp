@@ -12,24 +12,24 @@ import java.time.format.DateTimeFormatter
 
 class ButtonsActivity : AppCompatActivity() {
     private var countBtn = 0
-    private var YNBtn = false
-    private val TxtToast = "HI! I'm toast button"
+    private var ynBtn = false
+    private val txtToast = "HI! I'm toast button"
     private val textDuration= Toast.LENGTH_SHORT
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_buttons)
 
-        val BtnCounter: Button = findViewById(R.id.BtnCounter)
-        BtnCounter.setOnClickListener{
+        val btnCounter: Button = findViewById(R.id.BtnCounter)
+        btnCounter.setOnClickListener{
             countBtn++
-            BtnCounter.text="$countBtn"
+            btnCounter.text="$countBtn"
         }
 
-        val NoYesBtn: Button= findViewById(R.id.YesNoBtn)
-        NoYesBtn.setOnClickListener{
-            YNBtn=!YNBtn
-            YNUpdateBtn(NoYesBtn)
+        val noYesBtn: Button= findViewById(R.id.YesNoBtn)
+        noYesBtn.setOnClickListener{
+            ynBtn=!ynBtn
+            ynUpdateBtn(noYesBtn)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -38,22 +38,22 @@ class ButtonsActivity : AppCompatActivity() {
             insets
         }
 
-        val TBtn: Button = findViewById(R.id.ToastBtn)
-        TBtn.setOnClickListener{
-            val toast = Toast.makeText(this, TxtToast, textDuration) // in Activity
+        val toastBtn: Button = findViewById(R.id.ToastBtn)
+        toastBtn.setOnClickListener{
+            val toast = Toast.makeText(this, txtToast, textDuration) // in Activity
             toast.show()
         }
-        val TimeToastBtn: Button=findViewById(R.id.TimeToastButton)
+        val timeToastBtn: Button=findViewById(R.id.TimeToastButton)
         val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
         val current = LocalDateTime.now().format(formatter)
-        TimeToastBtn.setOnClickListener{
+        timeToastBtn.setOnClickListener{
             val timetoast = Toast.makeText(this,current,textDuration)
             timetoast.show()
         }
     }
 
-    private fun YNUpdateBtn(button: Button){
-        if (YNBtn)
+    private fun ynUpdateBtn(button: Button){
+        if (ynBtn)
             button.text="YES"
         else
             button.text="NO"
