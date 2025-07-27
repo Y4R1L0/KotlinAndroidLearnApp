@@ -4,3 +4,4 @@ yes, I know that design is terrible because It's too difficult to create apps wi
 ![scr2](https://github.com/user-attachments/assets/ef33757d-5ee6-4d5d-b8f2-8ba0b1463539)
 ![scr3](https://github.com/user-attachments/assets/7252a580-80f9-45c2-b5d3-2d0ec44b9f0e)
 ![scr4](https://github.com/user-attachments/assets/60890865-8f1f-429e-8b17-1abee16d7113)
+![ezgif-8b2ce126e3d59f](https://github.com/user-attachments/assets/68ab57b1-60c2-46d9-bc20-9a213e280793)
